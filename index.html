@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="task3.js"></script>
+</head>
+<body>
+	<style>
+     body  {
+  background-image: url("./images/img1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+button {
+  height: 50px;
+  width: 50px;
+  margin: 11px 4px;
+  border: none !important;
+  font-weight: bold;
+  transition: width 2s, height 2s, transform 2s;
+}
+
+.btn:hover{
+	
+
+transform: rotate(-50deg);
+
+background-color: #CF1B54;
+font-weight: bold;
+
+ }
+
+
+
+.btn{
+   border-radius: 30px;
+}
+.in{
+	width: 340px;
+	border:2px solid #F4BCB7;
+	border-radius: 10px;
+  
+}
+.bc{
+	border:2px solid #50EAE3;
+	width:350px;
+	margin: 10vh auto;
+  background-color: #F4BCB7;
+  border-radius: 20px;
+}
+
+ 
+
+</style>
+
+	
+	<h2 class="text-center">Bootstrap Calculator</h2>
+
+	<div class="container text-center ">
+		<div class="pl-0 bc ">
+      <div class="row  mx-auto d-block"  >
+      <form name="calc">
+        <input type="text" class="p-4  text-right mt-3 in btn-light " name="result" readonly>
+      </form>
+    </div>
+    <div class="row mx-auto d-block">
+      <div class="col-lg-12">
+      <button id="allClear" type="button" class="btn but btn-danger" onclick="clearscreen()">AC</button>
+      <button id="clear" type="button" class="btn btn-warning" onclick="clearscreen()">CE</button>
+      <button id="%" type="button" class="btn btn-light" onclick="myFunction(this.id)">%</button>
+      <button id="/" type="button" class="btn btn-light" onclick="myFunction(this.id)">÷</button>
+      <button id="3.14159" type="button" class="btn btn-light" onclick="myFunction(this.id)">&#960</button>
+    
+    </div>
+    <div class="row mx-auto d-block">
+      <button id="7" type="button" class="btn btn-light" onclick="myFunction(this.id)">7</button>
+      <button id="8" type="button" class="btn btn-light" onclick="myFunction(this.id)">8</button>
+      <button id="9" type="button" class="btn btn-light" onclick="myFunction(this.id)">9</button>
+      <button id="*" type="button" class="btn btn-light" onclick="myFunction(this.id)">x</button>
+      <button id="x&#94" value="x&#94" type="button" class="btn btn-light" onclick="expfun()">x&#94</button>
+      
+    </div>
+    <div class="row mx-auto d-block">
+      <button id="4" type="button" class="btn btn-light" onclick="myFunction(this.id)">4</button>
+      <button id="5" type="button" class="btn btn-light" onclick="myFunction(this.id)">5</button>
+      <button id="6" type="button" class="btn btn-light" onclick="myFunction(this.id)">6</button>
+      <button id="-" type="button" class="btn btn-light" onclick="myFunction(this.id)">-</button>
+      <button id="ln" type="button" class="btn btn-light" onclick="logfun()">ln</button>
+    </div>
+    <div class="row mx-auto d-block">
+      <button id="1" type="button" class="btn btn-light" onclick="myFunction(this.id)">1</button>
+      <button id="2" type="button" class="btn btn-light" onclick="myFunction(this.id)">2</button>
+      <button id="3" type="button" class="btn btn-light" onclick="myFunction(this.id)">3</button>
+      <button id="+" type="button" class="btn btn-light" onclick="myFunction(this.id)">+</button>
+      <button id="-" type="button" class="btn btn-light" onclick="sqrtfun()">&radic;</button>
+    </div>
+    <div class="row mx-auto d-block">
+      <button id="0" type="button" class="btn btn-light" onclick="myFunction(this.id)">0</button>
+      <button id="." type="button" class="btn btn-light" onclick="myFunction(this.id)">.</button>
+      <button id="cos" type="button" class="btn btn-light" onclick="cosfun()">cos</button>
+      <button id="tan" type="button" class="btn btn-light" onclick="tanfun()" >tan</button>
+      <button id="sqr" type="button" class="btn btn-light" onclick="square()"> x&#xb2;</button>
+    </div>
+    <div class="row mx-auto d-block">
+      <button id="(" type="button" class="btn btn-light" onclick="myFunction(this.id)">(</button>
+      <button id=")" type="button" class="btn btn-light" onclick="myFunction(this.id)">)</button>
+      <button id="blank" type="button" class="btn btn-light" onclick="sinfun()" >sin</button>
+      <button id="blank" type="button" class="btn btn-primary" onclick="deleteChar(calc.result.value)"> <-- </button>
+      <button id="" type="button" class="btn btn-success" onclick="calculate()">=</button>
+      
+    </div>
+  </div>
+</div>
+</body>
+</html>
